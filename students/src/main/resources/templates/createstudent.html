@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>addition of student</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+</head>
+<body>
+<div class ="container">
+  <div class="row">
+    <div class="col-lg-6 col-sm-6 container justify-content-center cord">
+      <h1 class="text-center"> Create new Student</h1>
+      <div class = "card-boby">
+        <form th:action="@{/products}" th:object="${student}" method="post">
+          <div class ="form-group">
+            <label> Student id</label>
+            <input type="number" name="ids" th:field="*{id}" class="form-control" placeholder="enter id">
+          </div>
+          <div class ="form-group">
+            <label> Student name</label>
+            <input type="text" name="names" th:field="*{name}" class="form-control" placeholder="enter name">
+          </div>
+          <div class ="form-group">
+            <label> Student email</label>
+            <input type="email" name="emails" th:field="*{email}" class="form-control" placeholder="enter email">
+          </div>
+          <div class ="form-group">
+            <label> Student long</label>
+            <input type="text" name="number" th:field="*{num}" class="form-control" placeholder="enter num">
+          </div>
+          <div class="box-footer">
+            <button type="submit" class="btn btn-primary"></button>
+          </div>
+
+        </form>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
